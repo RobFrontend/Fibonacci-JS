@@ -30,5 +30,6 @@ submit.addEventListener("click", function (e) {
     choosedNum.value = "";
   } else {
     result.textContent = `Choose number between 1 and 999`;
+    resultNum.textContent = "";
   }
 });
