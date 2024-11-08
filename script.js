@@ -27,6 +27,7 @@ submit.addEventListener("click", function (e) {
     result.textContent = `The Fibonacci number at position ${choosedNumValue} is ${BigInt(
       fibonacci.at(choosedNumValue - 1)
     )}`;
+    choosedNum.value = "";
   } else {
     result.textContent = `Choose number between 1 and 999`;
   }
