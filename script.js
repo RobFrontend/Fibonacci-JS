@@ -2,6 +2,7 @@ const sequence = document.querySelector("h2");
 const choosedNum = document.querySelector("input");
 const submit = document.querySelector("button");
 const result = document.querySelector("h4");
+const resultNum = document.querySelector(".result");
 
 let arr = [0, 1];
 let i;
@@ -24,9 +25,8 @@ submit.addEventListener("click", function (e) {
   e.preventDefault();
   let choosedNumValue = +choosedNum.value;
   if (choosedNumValue > 0 && choosedNumValue <= 999) {
-    result.textContent = `The Fibonacci number at position ${choosedNumValue} is ${BigInt(
-      fibonacci.at(choosedNumValue - 1)
-    )}`;
+    result.textContent = `The Fibonacci number at position ${choosedNumValue}:`;
+    resultNum.textContent = `${BigInt(fibonacci.at(choosedNumValue - 1))}`;
     choosedNum.value = "";
   } else {
     result.textContent = `Choose number between 1 and 999`;
